@@ -28,7 +28,7 @@ def func_ConnectToDB():
     # mysql://b89f7ac9ae97e7:12576c53@us-cdbr-east-03.cleardb.com/heroku_2c359834c332ed6?reconnect=true
     try:
         mydb = mysql.connect(
-        host="mysql://b9f39af52773c3:22278c71@eu-cdbr-west-02.cleardb.net/heroku_24923be11f0f3cb?reconnect=true",
+        host="localhost",
         user="root",
         password="alibhp110",
         database="gamegeek"
