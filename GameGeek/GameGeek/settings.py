@@ -78,12 +78,25 @@ WSGI_APPLICATION = 'GameGeek.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'heroku_3a6af533857122d',
+            'USER': 'b8a0b341a60dcd',
+            'PASSWORD': '0d9569a0',
+            'HOST': 'eu-cdbr-east-05.cleardb.com',
+            'PORT': '5432',
+        }
+    }
+
 
 
 # Password validation
