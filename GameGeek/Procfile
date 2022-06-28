@@ -1,2 +1,1 @@
-release: python manage.py migrate
-web: gunicorn gaminggeek.wsgi
+web: gunicorn GameGeek.wsgi
